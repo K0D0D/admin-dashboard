@@ -1,4 +1,5 @@
 import { useState } from "react";
+import twclsx from "../utils/twclsx";
 import NewUser from "./NewUser";
 
 interface IProps
@@ -7,17 +8,21 @@ interface IProps
 		HTMLDivElement
 	> {
 	children: React.ReactNode;
+	className?: string;
 	[x: string]: any;
 }
 
-const Wrapper = ({ children, ...rest }: IProps) => {
+const Wrapper = ({ children, className, ...rest }: IProps) => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
 	const toggleIsOpen = () => setIsModalOpen(!isModalOpen);
 
 	return (
 		<div
-			className="max-w-6xl my-5 mx-auto shadow-xl pb-1 bg-slate-700 text-zinc-600"
+			className={twclsx(
+				"max-w-6xl my-5 mx-auto shadow-xl pb-1 bg-slate-700 text-zinc-600",
+				className
+			)}
 			{...rest}
 		>
 			<div className="p-3 flex justify-between">

@@ -1,15 +1,28 @@
 import ReactModal, { Props } from "react-modal";
+import twclsx from "../utils/twclsx";
 
 interface IProps extends Props {
+	overlayClassName?: string;
+	className?: string;
 	children?: React.ReactNode;
 	onRequestClose?: () => void;
 	[x: string]: any;
 }
 
-const Modal = ({ children, onRequestClose, ...rest }: IProps) => (
+const Modal = ({
+	overlayClassName,
+	className,
+	children,
+	onRequestClose,
+	...rest
+}: IProps) => (
 	<ReactModal
-		overlayClassName="fixed top-0 left-0 right-0 bottom-0 flex bg-slate-200 bg-opacity-20 z-[999] text-inherit backdrop-blur-sm cursor-zoom-out"
-		className="m-auto max-w-lg w-full bg-slate-700 cursor-auto"
+		overlayClassName={twclsx(
+			"fixed top-0 left-0 right-0 bottom-0 flex z-[999] text-inherit cursor-zoom-out",
+			"bg-slate-200 bg-opacity-20 backdrop-blur-sm",
+			overlayClassName
+		)}
+		className={twclsx("m-auto max-w-lg w-full bg-slate-700 cursor-auto", className)}
 		onRequestClose={onRequestClose}
 		shouldCloseOnEsc
 		shouldCloseOnOverlayClick
