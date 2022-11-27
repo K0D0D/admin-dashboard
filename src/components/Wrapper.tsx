@@ -20,7 +20,7 @@ const Wrapper = ({ children, className, ...rest }: IProps) => {
 	return (
 		<div
 			className={twclsx(
-				"max-w-6xl my-5 mx-auto shadow-xl pb-1 bg-slate-700 text-zinc-600",
+				"max-w-6xl min-h-[10rem] my-5 mx-auto shadow-xl pb-1 bg-slate-700",
 				className
 			)}
 			{...rest}

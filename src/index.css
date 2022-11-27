@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-slate-500;
+@layer base {
+	* {
+		@apply focus-visible:outline outline-2 outline-offset-2 outline-green-500;
+	}
+    body {
+        @apply bg-slate-500 text-zinc-600;
+    }
 }
