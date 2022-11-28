@@ -26,6 +26,7 @@ const Modal = ({
 		onRequestClose={onRequestClose}
 		shouldCloseOnEsc
 		shouldCloseOnOverlayClick
+		closeTimeoutMS={500}
 		{...rest}
 	>
 		<button
