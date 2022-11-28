@@ -1,46 +1,109 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <br>
+    <a href="https://darly.solutions">
+        <img 
+            src="https://user-images.githubusercontent.com/87868068/204385622-b935a880-4f1e-4165-bdc9-614db0e1bcbc.png" 
+            alt="Darly Solutions logo" 
+        />
+    </a>
+    <br>
+    Darly Solutions Front-End Task
+    <br>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+    An admin dashboard template made with React, TypeScript, Tailwind CSS, and JSON Server
+</h4>
 
-## Available Scripts
+<p align="center">
+    <a href="#-assignment">Assignment</a> •
+    <a href="#-requirements">Requirementss</a> •
+    <a href="#-technologies">Technologies</a> •
+    <a href="#-installation">Installation</a> •
+    <a href="#-usage">Usage</a> •
+    <a href="#-screenshots">Screenshots</a> •
+    <a href="#-license">License</a>
+</p>
 
-In the project directory, you can run:
+## 🎯 Assignment
 
-### `npm start`
+You need to write a small application in React + Typescript. The application is written only through function components and hooks, it is forbidden to use classes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚩 Requirements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
++ Create a table that can contain an arbitrary number of rows (from 5 to 15)
++ The data in the table must be loaded from the server
++ Use "Infinite Loader" to load new data
++ State manager (or lack thereof, justify the choice or lack of a tool)
++ In the form of creating a new record in the table, there must be at least 5 inputs
+  + Keep in mind that there can be any number of rows
+  + Inputs must contain validation (at least mandatory or complex like a valid email address)
+  + Must have appropriate checks before submitting (disable buttons or others)
+  + The server may not accept the form and return errors (you may not implement it, but describe the implementation)
++ The form must be submitted via the API. The entry is made in the table
++ Add any animation (for example popup with a form, use something more complicated than simple CSS animations)
++ Upload code to GitHub.
 
-### `npm test`
+## 🔧 Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- React-Query
+- TypeScript
+- Tailwind CSS
+- JSON Server
 
-### `npm run build`
+## 🔌 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clone this repo
+```bash
+git clone https://github.com/K0D0D/admin-dashboard.git
+```
+- Go to the project directory
+```bash
+cd admin-dashboard
+```
+- Install npm dependencies
+```bash
+npm i
+```
+- Add the server URL to the .env.local file in the project directory (http://localhost:3000 by default)
+```bash
+REACT_APP_API_URL=YOUR_REACT_APP_API_URL
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  💻 Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- start the JSON Server
+```bash
+npx json-server -w data/db.json
+```
+- start the Create React App server
+```bash
+npm start
+```
+- build the project
+```bash
+npm run build
+```
 
-### `npm run eject`
+## 📷 Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Initial data loading**
+![Screenshot of initial data loading](https://user-images.githubusercontent.com/87868068/204395195-0fa77e62-52f1-4c6b-b693-bf821d311706.png)
+<br/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Users table**
+![Screenshot of users table](https://user-images.githubusercontent.com/87868068/204395459-618d93b3-b3ff-4c81-814e-bd174be9610d.png)
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Add user form**
+![Screenshot of add user form](https://user-images.githubusercontent.com/87868068/204399831-ff714571-37d7-4dfb-8da0-b9c253ad892f.png)
+<br/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Fields validation**
+![Screenshot of fields validation](https://user-images.githubusercontent.com/87868068/204400099-db8c0122-e027-4c98-80fd-bc616ec5f7a0.png)
+<br/>
 
-## Learn More
+## 🔑 License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[MIT](https://github.com/K0D0D/unsplash-clone/blob/master/LICENSE.md)
