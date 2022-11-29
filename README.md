@@ -17,7 +17,7 @@
 
 <p align="center">
     <a href="#-assignment">Assignment</a> •
-    <a href="#-requirements">Requirementss</a> •
+    <a href="#-requirements">Requirements</a> •
     <a href="#-technologies">Technologies</a> •
     <a href="#-installation">Installation</a> •
     <a href="#-usage">Usage</a> •
